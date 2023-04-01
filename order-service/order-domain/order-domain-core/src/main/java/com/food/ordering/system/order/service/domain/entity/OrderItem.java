@@ -50,6 +50,10 @@ public class OrderItem extends BaseEntity<OrderItemId> {
         return subTotal;
     }
 
+    public static Builder builder() {
+        return Builder.builder();
+    }
+
     public static final class Builder {
         private OrderItemId orderItemId;
         private Product product;
