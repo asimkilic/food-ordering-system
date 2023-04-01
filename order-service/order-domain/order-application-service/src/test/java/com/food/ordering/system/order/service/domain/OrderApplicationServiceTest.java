@@ -157,7 +157,7 @@ public class OrderApplicationServiceTest {
     }
 
     @Test
-    public void shouldOrderDomainException_whenOrderHasWrongTotalPrice() {
+    public void shouldThrowOrderDomainException_whenOrderHasWrongTotalPrice() {
         String expectedExceptionMessage = "Total price: 250.00 is not equal to Order items total: 200.00!";
         OrderDomainException exception = assertThrows(OrderDomainException.class, () -> orderApplicationService.createOrder(createOrderCommandWrongPrice));
         assertEquals(expectedExceptionMessage, exception.getMessage());
